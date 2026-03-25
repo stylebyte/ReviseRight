@@ -1,0 +1,220 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.html");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RightRevise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <div class="container-fluid px-0">
+        <div class="d-flex align-items-center justify-content-between px-4 py-4" style="background:lightblue;">
+
+            <div class="d-flex align-items-center p-3 ">
+                <img src="favicon.png" class="img-fluid" style="width:150px" alt="logo">
+            </div>
+            <h4 class="position-absolute top-10 start-50  translate-middle text-center me-50"style="color:rgb(15, 0, 66);">Home</h4>
+        </div>
+
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-5 text-center mb-4 mb-md-0">
+                <div class="border rounded-4 p-4">
+                    <img src="planner.png" class="img-fluid" alt="Revision Planner">
+                </div>
+            </div>
+
+            <div class="col-md-7 ps-md-5">
+                <h2 class="fw-bold mb-4" style="color: rgba(1, 4, 184, 0.546)">
+                    Struggling with revision?
+                    <br>
+                    Get a clear, personalised plan in minutes.
+                </h2>
+
+                <p class="fs-5 text-dark mb-4">
+                    <strong>This Revision Planner builds a simple, effective schedule that tells you exactly what to
+                        revise — and when.</strong>
+                </p>
+                  <a href="study.php" class="btn btn-lg px-5 py-3 text-white rounded-3" style="background-color:#031c73;">
+                START LEARNING →
+            </a>
+                <p class="fw-semibold mt-3">
+                    No adds. No marketing emails. Ever
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid px-0 py-5" style="background:rgb(235, 193, 116)">
+        <div class="text-center px-4">
+            <h2 class="fw-bold mb-4">
+                IT DOESN’T HAVE TO FEEL THIS OVERWHELMING
+            </h2>
+
+            <p class="fs-5 mb-0">
+                So many subjects. So much homework.
+                And “just revise” isn’t exactly helpful.
+            </p>
+
+            <p class="fs-5 mb-0">
+                You want to do well —
+                you just need a clear place to start.
+            </p>
+
+            <h4 class="fw-bold mb-4">
+                That’s where we help.
+            </h4>
+
+            <p class="fs-5 mb-0">
+                Revision Planner turns stress and confusion into a simple, step-by-step plan you can actually follow.
+            </p>
+
+            <h4 class="fw-bold mb-4">
+                Here’s how it works…
+            </h4>
+        </div>
+    </div>
+
+    <section class="py-5" style="background:lightyellow">
+        <div class="container text-black text-center">
+
+            <div class="mb-5">
+                <p class="fs-5">
+                    This Revision Planner takes all that stress, confusion, and overwhelm…
+                    and turns it into a simple plan that actually makes sense.
+                </p>
+
+                <h2 class="fw-bold">Here's how it works...</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <span class="badge rounded-pill bg-info mb-3">STEP 1</span>
+                            <h5 class="fw-bol mt-3">Add your subjects</h5>
+                            <p class="text-muted">
+                                Pick what you’re studying (and personalise your colours if you like).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <span class="badge rounded-pill bg-warning mb-3">STEP 2</span>
+                            <h5 class="fw-bold mt-3">Add your term dates</h5>
+                            <p class="text-muted">
+                                We’ll map out your study time between now and your exams.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <span class="badge rounded-pill bg-primary mb-3">STEP 3</span>
+                            <h5 class="fw-bold mt-3">Generate your plan</h5>
+                            <p class="text-muted">
+                                In seconds, your plan is ready — automatically balanced.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="fs-5 text-white mb-4">
+                Start free today – upgrade anytime when you’re ready.
+            </p>
+
+            <a href="study.php" class="btn btn-lg px-5 py-3 text-white rounded-3" style="background-color:#031c73;">
+                START LEARNING →
+            </a>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">WORK SMARTER, NOT HARDER</h2>
+
+            <p class="text-muted mb-5">
+                Revision doesn’t have to feel like panic, guilt, and late-night cramming.<br>
+                Whether you’re starting from zero or already halfway there,<br>
+                My Revision Planner helps you get organised – your way.
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm border-2 rounded-4">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-2">FREE ACCOUNT</h4>
+                            <p class="fw-semibold mb-3">Revision Plan Generator</p>
+
+                            <p><strong>Simple setup</strong> – just add your subjects and term dates.</p>
+                            <p>Generates a full-year printable study plan <strong>automatically</strong>.</p>
+                            <p>Add or remove blocks manually to edit (weekdays only).</p>
+                            <p class="fw-bold">100% private – no ads, no tracking, no marketing emails.</p>
+
+                            <a href="study.php" class="btn btn-info text-white px-4 py-2 mt-3">
+                                START LEARNING
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm border-2 rounded-4 border-info">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-info mb-2">FULL ACCOUNT</h4>
+                            <p class="fw-semibold mb-3">Take it to the next level</p>
+
+                            <p><strong>Prioritise subjects</strong> that need extra focus.</p>
+                            <p>
+                                Create a <strong>personalised, exam-specific plan</strong> for the final weeks –
+                                we include your actual exam timetable automatically.
+                            </p>
+                            <p><strong>Topic checklists</strong> for each subject and exam board.</p>
+                            <p>Easy access to <strong>past papers and mark schemes</strong>.</p>
+
+                            <a href="#" class="btn btn-dark px-4 py-2 mt-3">GET IT ALL FOR $50</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviseRight - Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="head position-relative d-flex align-items-center p-3" style=" background:lightblue;">
+        <img src="favicon.png" class="img-fuild me-4" style="width :150px; height: auto;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center me-5" style="color:rgb(15, 0, 66);">
+            <h2 class="mb-0">Welcome To RightRevise</h2>
+            <p class="mb-0">Revise smart. Stay consistent.</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+
+                    <h3 class="fw-bold mb-4" style="color:rgb(15, 0, 66);">Create Account</h3>
+
+                    <form id="registerForm">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" style="color:rgb(15, 0, 66);">FULL NAME</label>
+                            <input type="text" name="full_name" class="form-control form-control-lg"
+       placeholder="Enter your full name" required>
+                        </div>
+
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" style="color:rgb(15, 0, 66);">EMAIL</label>
+                            <input type="email" name="email" class="form-control form-control-lg"
+       placeholder="Enter your email" required>
+                        </div>
+
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" style="color:rgb(15, 0, 66);">PASSWORD</label>
+                           <input type="password" name="password" class="form-control form-control-lg"
+       placeholder="Create a password" required>
+                        </div>
+
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" style="color:rgb(15, 0, 66);">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm_password" class="form-control form-control-lg"
+       placeholder="Re-enter password" required>
+                        </div>
+
+
+                        <button type="submit" class="btn px-4 py-2 fw-semibold" style="background-color:rgb(15, 0, 66);color:azure;">
+                            Submit
+                        </button>
+
+
+                        <div class="text-center">
+                            <p class="mb-0">
+                                Already have an account?
+                                <a href="index.html" class="btn px-4 py-2 fw-semibold"
+                                    style="background-color:rgb(15, 0, 66);color:azure;">
+                                    LOGIN
+                                </a>
+                            </p>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+    formData.append("action", "register");
+
+   fetch("validation.php", {
+    method: "POST",
+    body: formData,
+    credentials: "same-origin"
+})
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+
+        if (data.status === "success") {
+            window.location.href = "index.html";
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong");
+    });
+});
+</script>
+
+</body>
+
+</html>
